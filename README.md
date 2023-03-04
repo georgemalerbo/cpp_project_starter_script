@@ -42,7 +42,7 @@ It you plan on using external libraries it is recommended that you set the "CMAK
 
 - (e.g., ".bashrc" ".zshrc" ".zprofile" ".profile")
 
-## Step 3: Add the following line at the end of the text file
+### Step 3: Add the following line at the end of the text file
 
 - for bash or zsh
 
@@ -52,11 +52,11 @@ It you plan on using external libraries it is recommended that you set the "CMAK
 
   `set -x CMAKE_TOOLCHAIN_FILE ~/vcpkg/scripts/buildsystems/vcpkg.cmake`
 
-## Step 4: Save and close the file.
+### Step 4: Save and close the file.
 
-## Step 5: To apply the changes, restart your terminal
+### Step 5: To apply the changes, restart your terminal
 
-## Adding "code" Command to PATH
+### Adding "code" Command to PATH
 
 If you are using Visual Studio Code, you can add the "code" command to your PATH by following these steps:
 
@@ -65,7 +65,7 @@ If you are using Visual Studio Code, you can add the "code" command to your PATH
 3. Search for "Shell Command: Install 'code' command in PATH" and select it.
 4. Recommended to install the CMake Tools and C++ extensions packs in VS Code.
 
-## Setting up VCPKG
+### Setting up VCPKG
 
 - To get started with VCPKG, follow the instructions in the [official documentation](https://github.com/microsoft/vcpkg#quick-start).
 - VCPKG provides a simple way to install and manage C++ libraries for your projects.
