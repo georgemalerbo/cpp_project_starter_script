@@ -29,33 +29,6 @@ Before using this script, you should have the following tools installed:
 5. Follow the prompts to input the project directory location, project name, and source file names (if any).
 6. After the script completes, you will have a new project directory with starter files.
 
-## Setting the "CMAKE_TOOLCHAIN_FILE" environment variable
-
-It you plan on using external libraries it is recommended that you set the "CMAKE_TOOLCHAIN_FILE" environment variable in your environment before running this script. This is because the script will detect this variable and automatically add it to the CMakeLists.txt file. This variable specifies the location of the C++ toolchain file (vcpkg.cmake) used by cmake.
-
-### Step 1: Open the terminal on your computer.
-
-- Navigate to your home directory "cd ~"
-- If you are using fish shell, the config.fish file is located in at ~/.config/fish
-
-### Step 2: Open one of your startup files from your home directory with a text editor
-
-- (e.g., ".bashrc" ".zshrc" ".zprofile" ".profile")
-
-### Step 3: Add the following line at the end of the text file
-
-- for bash or zsh
-
-  `export CMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake`
-
-- for fish:
-
-  `set -x CMAKE_TOOLCHAIN_FILE ~/vcpkg/scripts/buildsystems/vcpkg.cmake`
-
-### Step 4: Save and close the file.
-
-### Step 5: To apply the changes, restart your terminal
-
 ### Adding "code" Command to PATH
 
 If you are using Visual Studio Code, you can add the "code" command to your PATH by following these steps:

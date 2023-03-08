@@ -69,17 +69,6 @@ if [ -d "$projectPath" ]; then
 fi
 
 
-# added a section that check if a cmake toolchain file env variable is set
-echo "Checking for CMAKE_TOOLCHAIN_FILE"
-echo " "
-if [[ -z "${CMAKE_TOOLCHAIN_FILE}" ]]; then
-  echo "CMAKE_TOOLCHAIN_FILE variable is not set"
-  echo "Please make sure that the toolchain file specified in the `CMAKE_TOOLCHAIN_FILE` environment"
-else
-  echo "CMAKE_TOOLCHAIN_FILE variable is set to ${CMAKE_TOOLCHAIN_FILE}"
-fi
-
-
 # Create new project directory
 mkdir -p "$projectPath"
 
@@ -149,7 +138,7 @@ EOF
 # projectName and compilierPath variables used in this section
 cat <<EOF > CMakeLists.txt
 cmake_minimum_required(VERSION 3.10)
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_TOOLCHAIN_FILE})
+
 project(${projectName})
 
 
