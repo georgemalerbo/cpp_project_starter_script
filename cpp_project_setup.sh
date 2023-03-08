@@ -68,33 +68,7 @@ if [ -d "$projectPath" ]; then
   exit 1
 fi
 
-# check to see if there is already the CXX env. variable set up for the compilier 
-# give user the chance to use a different compilier if they want
-echo "Checking for C++ compiler..."
-echo " "
 
-if [ -z "$CXX" ]; then
-    echo "Which C++ compiler do you want to use?"
-    read -p "Enter the compiler path: " compilerPath
-
-    # Check if the user entered a compiler path
-    if [ -z "$compilerPath" ]; then
-        echo "No compiler path entered. Exiting script."
-        exit 1
-    fi
-else
-    compilerPath="$CXX"
-    echo "Using default CXX environmental variable: $CXX"
-fi
-
-# Check if the compiler exists
-if ! command -v "$compilerPath" &> /dev/null; then
-    echo "Error: Compiler not found at $compilerPath. Exiting script." >&2
-    exit 1
-fi
-
-echo "Compiler found at $compilerPath. Script can continue."
-echo " "
 # added a section that check if a cmake toolchain file env variable is set
 echo "Checking for CMAKE_TOOLCHAIN_FILE"
 echo " "
@@ -180,9 +154,6 @@ project(${projectName})
 
 
 set(CMAKE_CXX_STANDARD 17)
-
-# Set compiler to use
-set(CMAKE_CXX_COMPILER "$compilerPath")
 
 # Add header files
 include_directories(include)
